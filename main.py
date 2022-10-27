@@ -120,6 +120,7 @@ config.file_removal(config.global_list)
 config.file_reorder('list_alarm.xlsx','new_list_alarm.xlsx')
 config.file_header('new_list_alarm.xlsx')
 os.remove('list_alarm.xlsx')
+print ('Successfully ended!')
 
 
 # for i in range(1,config.number_of_HH_GUI):
