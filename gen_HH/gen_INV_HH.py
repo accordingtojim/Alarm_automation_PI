@@ -60,7 +60,7 @@ def file_creation_0( path_to_template_CL):
                         + " - "\
                         + "HH1HD0"\
                         + str(HH)\
-                        + "- PI0"\
+                        + " - PI0"\
                         + str(HH)
                         ws.cell(row=i+counter*number_row,column=3).value = "HH1HD0"\
                         + str(HH)\

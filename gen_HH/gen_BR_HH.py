@@ -54,8 +54,8 @@ def file_creation_6( path_to_template_BR):
                         + ",BB0"\
                         + str(BB)\
                         + " - HH1HD0"\
-                        + str(HH)
-                        + "- PI0"\
+                        + str(HH)\
+                        + " - PI0"\
                         + str(HH)
                         ws.cell(row=i+counter*number_row,column=3).value = "HH1HD0"\
                         + str(HH)\
