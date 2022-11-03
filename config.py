@@ -140,7 +140,7 @@ def file_reorder(path,new_path):
             counter += 1
     else:
         while str(counter) != str(int(num_HH_GUI)+1) :
-            for i in range(1,number_row):
+            for i in range(1,number_row+1):
                 if (HH + str(counter) in str(ws.cell(row=i,column=3).value)) or (HH + str(counter) in str(ws.cell(row=i,column=6).value)) :
                     for j in range (1,60):
                         ws1.cell(row=s,column=j).value = ws.cell(row=i,column = 2 + j).value
