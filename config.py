@@ -159,6 +159,27 @@ def file_header(file_path):
         ws.cell(row=1,column=counter).value = i
         counter += 1
     wb.save(filename=file_path)
+def file_numbering(file_path):
+    wb=load_workbook(file_path)
+    ws=wb.active
+    counter = 1 
+    counter_tot = 0
+    counter_ = 0
+    while TRUE:
+        if ws.cell(row = 2 + counter_tot,column=3).value is None :
+                break
+        if (("HH1HD0"+str(counter) in ws.cell(row = 2 + counter_tot,column=3).value) or ("Spare" in ws.cell(row = 2 + counter_tot,column=3).value)):
+            init_number = 10000*counter 
+            ws.cell(row = 2 + counter_tot,column=1).value = init_number + counter_
+            ws.cell(row = 2 + counter_tot,column=2).value = init_number + counter_
+            counter_tot += 1
+            counter_ += 1  
+        else: 
+            counter += 1
+            counter_ = 0       
+    wb.save(file_path)
+        
+    
         
 
 
