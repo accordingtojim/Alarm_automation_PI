@@ -123,8 +123,7 @@ os.remove('list_alarm.xlsx')
 print ('Program ended!')
 
 
-# for i in range(1,config.number_of_HH_GUI):
-#     gen_INV.file_creation_0('template_CL.xlsx')
+
     
     
     
