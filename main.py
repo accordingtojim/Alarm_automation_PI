@@ -119,6 +119,7 @@ config.file_aggregation(config.global_list)
 config.file_removal(config.global_list)
 config.file_reorder('list_alarm.xlsx','new_list_alarm.xlsx')
 config.file_header('new_list_alarm.xlsx')
+config.file_numbering('new_list_alarm.xlsx')
 os.remove('list_alarm.xlsx')
 print ('Program ended!')
 
