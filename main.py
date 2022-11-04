@@ -94,25 +94,25 @@ config.n_PI = number_of_PI.get()
 
 if config.n_PI != '' and config.n_PI != 0:
 # energy house
-    gen_EH05.gen_BB_EH05.file_creation_1('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_BB_EH05.xlsx')
-    gen_EH05.gen_PEMS_EH05.file_creation_3('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_PEMS_EH05.xlsx')
-    gen_EH05.gen_HVAC_EH05.file_creation_4('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_HVAC_EH05.xlsx')
-    gen_EH05.gen_BR_EH05.file_creation_6('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_BR_EH05.xlsx')
+    gen_EH05.gen_BB_EH05.file_creation_1('./template_excel/template_BB_EH05.xlsx')
+    gen_EH05.gen_PEMS_EH05.file_creation_3('./template_excel/template_PEMS_EH05.xlsx')
+    gen_EH05.gen_HVAC_EH05.file_creation_4('./template_excel/template_HVAC_EH05.xlsx')
+    gen_EH05.gen_BR_EH05.file_creation_6('./template_excel/template_BR_EH05.xlsx')
     # power house
 if len(config.array_PH) != 1 and len(config.array_PH) != 0:
-    gen_PH2.gen_INV_PH2.file_creation_0('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_CL_PH2HD.xlsx')
-    gen_PH2.gen_AUX_PH2.file_creation_2('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_AUX_PH2HD.xlsx')
-    gen_PH2.gen_PEMS_PH2.file_creation_3('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_PEMS_PH2HD.xlsx')
-    gen_PH2.gen_SKID_PH2.file_creation_5('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_SKID_PH2HD.xlsx')
+    gen_PH2.gen_INV_PH2.file_creation_0('./template_excel/template_CL_PH2HD.xlsx')
+    gen_PH2.gen_AUX_PH2.file_creation_2('./template_excel/template_AUX_PH2HD.xlsx')
+    gen_PH2.gen_PEMS_PH2.file_creation_3('./template_excel/template_PEMS_PH2HD.xlsx')
+    gen_PH2.gen_SKID_PH2.file_creation_5('./template_excel/template_SKID_PH2HD.xlsx')
 # hybrid house
 if config.num_HH_GUI != '':
-    gen_HH.gen_INV_HH.file_creation_0('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_CL_HH.xlsx')
-    gen_HH.gen_BB_HH.file_creation_1('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_BB_HH.xlsx')
-    gen_HH.gen_AUX_HH.file_creation_2('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_AUX_HH.xlsx')
-    gen_HH.gen_HVAC_HH.file_creation_4('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_HVAC_HH.xlsx')
-    gen_HH.gen_PEMS_HH.file_creation_3('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_PEMS_HH.xlsx')
-    gen_HH.gen_SKID_HH.file_creation_5('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_SKID_HH.xlsx')
-    gen_HH.gen_BR_HH.file_creation_6('C:/Users/VB2117/CODICE jimmy/complete_test/template_excel/template_BR_HH.xlsx')
+    gen_HH.gen_INV_HH.file_creation_0('./template_excel/template_CL_HH.xlsx')
+    gen_HH.gen_BB_HH.file_creation_1('./template_excel/template_BB_HH.xlsx')
+    gen_HH.gen_AUX_HH.file_creation_2('./template_excel/template_AUX_HH.xlsx')
+    gen_HH.gen_HVAC_HH.file_creation_4('./template_excel/template_HVAC_HH.xlsx')
+    gen_HH.gen_PEMS_HH.file_creation_3('./template_excel/template_PEMS_HH.xlsx')
+    gen_HH.gen_SKID_HH.file_creation_5('./template_excel/template_SKID_HH.xlsx')
+    gen_HH.gen_BR_HH.file_creation_6('./template_excel/template_BR_HH.xlsx')
 
 
 config.file_aggregation(config.global_list)
@@ -120,7 +120,7 @@ config.file_removal(config.global_list)
 config.file_reorder('list_alarm.xlsx','new_list_alarm.xlsx')
 config.file_header('new_list_alarm.xlsx')
 os.remove('list_alarm.xlsx')
-print ('Successfully ended!')
+print ('Program ended!')
 
 
 # for i in range(1,config.number_of_HH_GUI):
