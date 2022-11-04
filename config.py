@@ -160,7 +160,6 @@ def file_header(file_path):
         counter += 1
     wb.save(filename=file_path)
         
-        
 
 
     
@@ -168,14 +167,5 @@ def file_header(file_path):
             
             
         
-        
-    
-    
 
-#print(array_name_HVAC(14))
-#a=['1','3','5']
-# print(convert_to_int(a))
-# a = [5,4,5,1]
-# b = [2,2,3,7]
-# print(multiply_array(a,b,TRUE))
 
