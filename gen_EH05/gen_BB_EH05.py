@@ -34,24 +34,32 @@ def file_creation_1( path_to_template_BB):
         for EH in range(1 , array_parsed_EH[PI-1]+1):
             for BB in range(1 , array_parsed_BB[PI-1] + 1):
                 for i in range(1,number_row+1):
-                    ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                    + " | "\
-                    + str(ws.cell(row=i+counter*number_row, column = 2).value)\
-                    + " | "\
-                    + "BB0"\
-                    + str(BB)\
-                    + " - "\
-                    + "EH05HD0"\
-                    + str(EH)\
-                    + ",PI0"\
-                    + str(PI)
-                    ws.cell(row=i+counter*number_row,column=4).value = "EH05HD0"\
-                    + str(EH)\
-                    + "_BMS"\
-                    + str(BB)\
-                    + "_"\
-                    + ws.cell(row=i+counter*number_row,column=4).value
+                    if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value:
+                        ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
+                        + " | "\
+                        + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)
+                        ws.cell(row=i+counter*number_row,column=4).value = "EH05HD0"\
+                        + str(EH)\
+                        + "_BMS"\
+                        + str(BB)\
+                        + "_BB."\
+                        + ws.cell(row=i+counter*number_row,column=4).value
+                    else:
+                        ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
+                        + " | "\
+                        + "BB0"\
+                        + str(BB)\
+                        + " - "\
+                        + "EH05HD0"\
+                        + str(EH)\
+                        + "- PI0"\
+                        + str(PI)
+                        ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                        + str(EH)\
+                        + "_BMS"\
+                        + str(BB)\
+                        + "_BB."\
+                        + ws.cell(row=i+counter*number_row,column=3).value
                 counter += 1
-    ws.delete_cols(2,1)
     ws.insert_cols(2)
     wb.save(path_to_new_template)
