@@ -23,7 +23,6 @@ def file_creation_5( path_to_template_SKID):
             for j in range(1,number_column+1):
                 for i in range(1,number_row+1):
                     ws.cell(row=i+n*number_row,column=j).value=ws.cell(row=i,column=j).value
-    #wb.save(path_to_new_template)
     for HH in range(1 , local_HH_GUI + 1):
         for SKID in range(1 , 2):
             for i in range(1,number_row+1):

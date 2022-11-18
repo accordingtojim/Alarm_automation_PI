@@ -32,26 +32,31 @@ def file_creation_2( path_to_template_AUX):
         for PH in range(1, array_parsed_EH[PI-1]+1):
             for AUX in range(1 , 3):
                 for i in range(1,number_row+1):
-                    ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                    + " | "\
-                    + str(ws.cell(row=i+counter*number_row, column = 2).value)\
-                    + " | "\
-                    + "AUX,CBESSHD"\
-                    + str(AUX)\
-                    + " - "\
-                    + "PH2HD0"\
-                    + str(PH)\
-                    +',PI0' + str(PI)
-                    ws.cell(row=i+counter*number_row,column=4).value = 'PH2HD0'\
-                    + str(PH)\
-                    + "_PCS"\
-                    + str(AUX)\
-                    + "_AUX_Status_HMI.wFAN_"\
-                    + str(ws.cell(row=i+counter*number_row,column=4).value)\
-                    + "_"\
-                    + str(ws.cell(row=i+counter*number_row,column=5).value)
+                    if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value :
+                        ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
+                        + " | "\
+                        + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)
+                        ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
+                        + str(PH)\
+                        + "_PCS"\
+                        + str(AUX)\
+                        + "_AUX_Status_HMI.wFAN_"\
+                        + str(ws.cell(row=i+counter*number_row,column=3).value) 
+                    else:
+                        ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
+                        + " | "\
+                        + "QAUX,PCS"\
+                        + str(AUX)\
+                        + " - "\
+                        + "PH2HD0"\
+                        + str(PH)\
+                        +' - PI0' + str(PI)
+                        ws.cell(row=i+counter*number_row,column=3).value = 'PH2HD0'\
+                        + str(PH)\
+                        + "_PCS"\
+                        + str(AUX)\
+                        + "_AUX_Status_HMI.wFAN_"\
+                        + str(ws.cell(row=i+counter*number_row,column=3).value)
                 counter += 1
-    ws.delete_cols(2,1)
     ws.insert_cols(2)
-    ws.delete_cols(5,1)
     wb.save(path_to_new_template)

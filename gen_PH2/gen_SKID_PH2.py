@@ -23,20 +23,25 @@ def file_creation_5( path_to_template_SKID):
             for j in range(1,number_column+1):
                 for i in range(1,number_row+1):
                     ws.cell(row=i+n*number_row,column=j).value=ws.cell(row=i,column=j).value
-    #wb.save(path_to_new_template)
     for PI in range(1 , local_n_PI + 1):
         for i in range(1,number_row+1):
-            ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-            + " | "\
-            + str(ws.cell(row =i+counter*number_row, column = 2).value)\
-            + " | "\
-            + "PI0"\
-            + str(PI)
-            ws.cell(row=i+counter*number_row,column=3).value = "PI0"\
-            + str(PI)\
-            + "_DiagnosticDB_wHMI_"\
-            + str(ws.cell(row=i+counter*number_row,column=3).value)
+            if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value:
+                ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
+                + " | "\
+                + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value) 
+                ws.cell(row=i+counter*number_row,column=3).value = "PI0"\
+                + str(PI)\
+                + "_DiagnosticDB_wHMI_"\
+                + str(ws.cell(row=i+counter*number_row,column=3).value)
+            else:
+                ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
+                + " | "\
+                + "PI0"\
+                + str(PI)
+                ws.cell(row=i+counter*number_row,column=3).value = "PI0"\
+                + str(PI)\
+                + "_DiagnosticDB_wHMI_"\
+                + str(ws.cell(row=i+counter*number_row,column=3).value)
         counter += 1
-    ws.delete_cols(2,1)
     ws.insert_cols(2)
     wb.save(path_to_new_template)

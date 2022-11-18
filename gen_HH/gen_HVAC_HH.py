@@ -34,7 +34,7 @@ def file_creation_4( path_to_template_HVAC):
                 if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value:
                     ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                     + " | "\
-                    + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value) + " | "  
+                    + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)   
                     ws.cell(row=i+counter*number_row,column=3).value = "HH1HD0"\
                     + str(HH)\
                     + "_HVAC_AIR3000_DB_"\
