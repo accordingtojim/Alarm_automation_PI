@@ -32,6 +32,10 @@ def file_creation_1( path_to_template_BB):
     #wb.save(path_to_new_template)
     for PI in range(1,local_n_PI+1):
         for EH in range(1 , array_parsed_EH[PI-1]+1):
+            if EH > 9 :
+                name_EH = "EH05HD"
+            else:
+                name_EH = "EH05HD0"
             for BB in range(1 , array_parsed_BB[PI-1] + 1):
                 for i in range(1,number_row+1):
                     if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value:
@@ -42,11 +46,11 @@ def file_creation_1( path_to_template_BB):
                         + "BB0"\
                         + str(BB)\
                         + " - "\
-                        + "EH05HD0"\
+                        + name_EH\
                         + str(EH)\
                         + "- PI0"\
                         + str(PI)    
-                        ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                        ws.cell(row=i+counter*number_row,column=3).value = name_EH\
                         + str(PI)\
                         + "_"\
                         + str(EH)\
@@ -60,11 +64,11 @@ def file_creation_1( path_to_template_BB):
                         + "BB0"\
                         + str(BB)\
                         + " - "\
-                        + "EH05HD0"\
+                        + name_EH\
                         + str(EH)\
                         + "- PI0"\
                         + str(PI)
-                        ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                        ws.cell(row=i+counter*number_row,column=3).value = name_EH\
                         + str(PI)\
                         + "_"\
                         + str(EH)\
