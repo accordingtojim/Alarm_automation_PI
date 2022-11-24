@@ -13,7 +13,7 @@ def openNewWindow():
     number_type0 = StringVar()
     config.counter += 1
     frame1 = Toplevel()
-    frame1.geometry("800x300")
+    frame1.geometry("800x400")
     frame1.resizable(True, True)
     frame1.title("Define "+config.num_assign(config.counter)+" topology")
     
@@ -79,7 +79,7 @@ def openNewWindow():
     empty_label.grid(row=12,column=0,columnspan=3,sticky=N,pady=0)
  
     # Next button
-    next_button = Button(frame1,text='Second Topology', command=openNewWindow)
+    next_button = Button(frame1,text='Next Topology', command=openNewWindow)
     next_button.grid(row=14,column=3,padx=0,sticky=E)
     
     # empty label 8

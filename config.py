@@ -83,10 +83,10 @@ def array_name_HVAC(num):
     half = int(num/2)
     array = []
     for i in range(0,half):
-        var = '1.'+str(i+1)
+        var = '1_'+str(i+1)
         array.append(var)
     for i in range(0,half):
-        var ='2.'+str(i+1)
+        var ='2_'+str(i+1)
         array.append(var)
     return array
 def file_aggregation(lista):
@@ -168,7 +168,7 @@ def file_numbering(file_path):
     while TRUE:
         if ws.cell(row = 2 + counter_tot,column=3).value is None :
                 break
-        if (("HH1HD0"+str(counter) in ws.cell(row = 2 + counter_tot,column=3).value) or ("Spare" in ws.cell(row = 2 + counter_tot,column=3).value)):
+        if (("PI0"+str(counter) in ws.cell(row = 2 + counter_tot,column=3).value) or ("Spare" in ws.cell(row = 2 + counter_tot,column=3).value)):
             init_number = 10000*counter 
             ws.cell(row = 2 + counter_tot,column=1).value = init_number + counter_
             ws.cell(row = 2 + counter_tot,column=2).value = init_number + counter_

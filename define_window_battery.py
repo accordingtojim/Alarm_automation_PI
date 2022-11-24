@@ -28,7 +28,7 @@ def openNewWindow():
     empty_label.grid(row=0,column=0,columnspan=3,sticky=N,pady=0)
     
     # Battery Bank LABEL
-    num_bb_label = Label(frame1, text="Insert the number of Battery Pack")
+    num_bb_label = Label(frame1, text="Insert the number of Battery Bank")
     num_bb_label.grid(row=1,column=2,padx=200)
     
     # empty label 2
