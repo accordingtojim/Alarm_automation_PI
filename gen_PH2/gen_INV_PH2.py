@@ -42,22 +42,8 @@ def file_creation_0( path_to_template_CL):
                         if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value:
                             ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                             + " | "\
-                            + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)
-                            ws.cell(row=i+counter*number_row,column=3).value = "HH1HD0"\
-                            + str(PH)\
-                            + "_"\
-                            + "PCS"\
-                            + str(C_BESS)\
-                            + "_CL"\
-                            + str(COLUMN)\
-                            + "_Status_HMI."\
-                            + str(ws.cell(row=i+counter*number_row,column=3).value)
-                        else:
-                            ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                            + " | "\
-                            + str(ws.cell(row=i+counter*number_row, column = 2).value)\
-                            + " | "\
-                            + "CL"\
+                            + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)\
+                            + " | CL"\
                             + str(COLUMN)\
                             + ",PCS"\
                             + str(C_BESS)\
@@ -66,7 +52,26 @@ def file_creation_0( path_to_template_CL):
                             + str(PH)\
                             + " - PI0"\
                             +str(PI)
-                            ws.cell(row=i+counter*number_row,column=4).value = "PH2HD0"\
+                            ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
+                            + str(PH)\
+                            + "_PCS"\
+                            + str(C_BESS)\
+                            + "_CL"\
+                            + str(COLUMN)\
+                            + "_Status_HMI."\
+                            + str(ws.cell(row=i+counter*number_row,column=3).value)
+                        else:
+                            ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
+                            + " | CL"\
+                            + str(COLUMN)\
+                            + ",PCS"\
+                            + str(C_BESS)\
+                            + " - "\
+                            + "PH2HD0"\
+                            + str(PH)\
+                            + " - PI0"\
+                            +str(PI)
+                            ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
                             + str(PH)\
                             + "_"\
                             + "PCS"\

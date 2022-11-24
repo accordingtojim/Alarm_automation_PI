@@ -42,8 +42,21 @@ def file_creation_6( path_to_template_BR):
                         if ('Spare' or 'spare') in ws.cell(row=i+counter*number_row,column=1).value:
                             ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                             + " | "\
-                            + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)
+                            + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)\
+                            + " | "\
+                            + "BR0"\
+                            + str(BR)\
+                            + ","\
+                            + "BB0"\
+                            + str(BB)\
+                            + " - "\
+                            + "EH05HD0"\
+                            + str(EH)\
+                            + " - PI0"\
+                            + str(PI)
                             ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                            + str(PI)\
+                            + "_"\
                             + str(EH)\
                             + "_BMS"\
                             + str(BB)\
@@ -66,11 +79,12 @@ def file_creation_6( path_to_template_BR):
                             + " - PI0"\
                             + str(PI)
                             ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                            + str(PI)\
+                            + "_"\
                             + str(EH)\
                             + "_BMS"\
                             + str(BB)\
-                            + "_"\
-                            + "BR0"\
+                            + "BR0" \
                             + str(BR)\
                             + "."\
                             + ws.cell(row=i+counter*number_row,column=3).value

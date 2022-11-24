@@ -36,9 +36,13 @@ def file_creation_3( path_to_template_PEMS):
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                         + " | "\
                         + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)\
-                        +",PI0"\
+                        + ", PEMS - EH05HD0"\
+                        + str(EH)\
+                        +" - PI0"\
                         +str(PI)
                         ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                        + str(PI)\
+                        + "_"\
                         + str(EH)\
                         + "_DiagnosticDB_"\
                         + str(ws.cell(row=i+counter*number_row,column=3).value)
@@ -46,9 +50,11 @@ def file_creation_3( path_to_template_PEMS):
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                         + ", PEMS - EH05HD0"\
                         + str(EH)\
-                        +",PI0"\
+                        +" - PI0"\
                         +str(PI)
                         ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                        + str(PI) \
+                        + "_"\
                         + str(EH)\
                         + "_DiagnosticDB_"\
                         + str(ws.cell(row=i+counter*number_row,column=3).value)

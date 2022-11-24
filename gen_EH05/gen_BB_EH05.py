@@ -37,13 +37,23 @@ def file_creation_1( path_to_template_BB):
                     if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value:
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                         + " | "\
-                        + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)
-                        ws.cell(row=i+counter*number_row,column=4).value = "EH05HD0"\
+                        + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)\
+                        + " | "\
+                        + "BB0"\
+                        + str(BB)\
+                        + " - "\
+                        + "EH05HD0"\
+                        + str(EH)\
+                        + "- PI0"\
+                        + str(PI)    
+                        ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                        + str(PI)\
+                        + "_"\
                         + str(EH)\
                         + "_BMS"\
                         + str(BB)\
-                        + "_BB."\
-                        + ws.cell(row=i+counter*number_row,column=4).value
+                        + "_"\
+                        + ws.cell(row=i+counter*number_row,column=3).value
                     else:
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                         + " | "\
@@ -55,10 +65,12 @@ def file_creation_1( path_to_template_BB):
                         + "- PI0"\
                         + str(PI)
                         ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                        + str(PI)\
+                        + "_"\
                         + str(EH)\
                         + "_BMS"\
                         + str(BB)\
-                        + "_BB."\
+                        + "_"\
                         + ws.cell(row=i+counter*number_row,column=3).value
                 counter += 1
     ws.insert_cols(2)

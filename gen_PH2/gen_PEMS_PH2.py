@@ -35,8 +35,12 @@ def file_creation_3( path_to_template_PEMS):
                     if ws.cell(row=i+counter*number_row,column=1).value == 'Spare':
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                         + " | "\
-                        + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value) + " | "
-                        ws.cell(row=i+counter*number_row,column=3).value = "PH02HD0"\
+                        + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)\
+                        + ",PEMS - PH2HD0"\
+                        + str(PH)\
+                        +" - PI0"\
+                        +str(PI)
+                        ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
                         + str(PH)\
                         + "_DiagnosticDB_"\
                         + str(ws.cell(row=i+counter*number_row,column=3).value)
@@ -44,11 +48,11 @@ def file_creation_3( path_to_template_PEMS):
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                         + " | "\
                         + str(ws.cell(row =i+counter*number_row, column = 2).value)\
-                        + ",PEMS - PH02HD0"\
+                        + ",PEMS - PH2HD0"\
                         + str(PH)\
                         +" - PI0"\
                         +str(PI)
-                        ws.cell(row=i+counter*number_row,column=3).value = "PH02HD0"\
+                        ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
                         + str(PH)\
                         + "_DiagnosticDB_"\
                         + str(ws.cell(row=i+counter*number_row,column=3).value)
