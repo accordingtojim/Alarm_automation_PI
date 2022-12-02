@@ -92,6 +92,7 @@ def file_creation_6( path_to_template_BR):
                             + str(EH)\
                             + "_BMS"\
                             + str(BB)\
+                            + "_"\
                             + name_BR\
                             + str(BR)\
                             + "."\
