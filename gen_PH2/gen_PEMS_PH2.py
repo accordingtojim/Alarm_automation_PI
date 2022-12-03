@@ -41,7 +41,7 @@ def file_creation_3( path_to_template_PEMS):
                         +" - PI0"\
                         +str(PI)
                         ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
-                        + str(PH)\
+                        + str(PI)\
                         + "_DiagnosticDB_"\
                         + str(ws.cell(row=i+counter*number_row,column=3).value)
                     else:
@@ -53,7 +53,7 @@ def file_creation_3( path_to_template_PEMS):
                         +" - PI0"\
                         +str(PI)
                         ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
-                        + str(PH)\
+                        + str(PI)\
                         + "_DiagnosticDB_"\
                         + str(ws.cell(row=i+counter*number_row,column=3).value)
                 counter += 1
