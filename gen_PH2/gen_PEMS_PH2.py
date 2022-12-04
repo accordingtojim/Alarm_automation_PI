@@ -46,8 +46,6 @@ def file_creation_3( path_to_template_PEMS):
                         + str(ws.cell(row=i+counter*number_row,column=3).value)
                     else:
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                        + " | "\
-                        + str(ws.cell(row =i+counter*number_row, column = 2).value)\
                         + ",PEMS - PH2HD0"\
                         + str(PH)\
                         +" - PI0"\
