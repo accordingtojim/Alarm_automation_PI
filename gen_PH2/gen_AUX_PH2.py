@@ -44,7 +44,7 @@ def file_creation_2( path_to_template_AUX):
                         + str(PH)\
                         +' - PI0' + str(PI)
                         ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
-                        + str(PH)\
+                        + str(PI)\
                         + "_PCS"\
                         + str(AUX)\
                         + "_AUX_Status_HMI."\
@@ -59,7 +59,7 @@ def file_creation_2( path_to_template_AUX):
                         + str(PH)\
                         +' - PI0' + str(PI)
                         ws.cell(row=i+counter*number_row,column=3).value = 'PH2HD0'\
-                        + str(PH)\
+                        + str(PI)\
                         + "_PCS"\
                         + str(AUX)\
                         + "_AUX_Status_HMI."\

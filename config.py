@@ -176,8 +176,10 @@ def file_numbering(file_path):
             counter_ += 1  
         else: 
             counter += 1
-            counter_ = 0       
+            counter_ = 0
+    wb['Sheet'].title = 'DiscreteAlarms'      
     wb.save(file_path)
+
         
     
         
@@ -186,7 +188,7 @@ def file_numbering(file_path):
     
             
             
-            
         
-
-
+        
+        
+        

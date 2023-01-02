@@ -36,48 +36,58 @@ def file_creation_6( path_to_template_BR):
     #wb.save(path_to_new_template)
     for PI in range(1 , local_n_PI + 1):
         for EH in range(1 , array_parsed_EH[PI-1]+1):
+            if EH > 9 :
+                name_EH = "EH05HD"
+            else:
+                name_EH = "EH05HD0"
             for BB in range(1,array_parsed_BB[PI-1]+1):
                 for BR in range(1,array_parsed_BR[PI-1]+1):
+                    if BR > 9 :
+                        name_BR = "BR"
+                    else:
+                        name_BR = "BR0"
                     for i in range(1,number_row+1):
                         if ('Spare' or 'spare') in ws.cell(row=i+counter*number_row,column=1).value:
                             ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                             + " | "\
                             + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)\
                             + " | "\
-                            + "BR0"\
+                            + name_BR\
                             + str(BR)\
                             + ","\
                             + "BB0"\
                             + str(BB)\
                             + " - "\
-                            + "EH05HD0"\
+                            + name_EH\
                             + str(EH)\
                             + " - PI0"\
                             + str(PI)
-                            ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                            ws.cell(row=i+counter*number_row,column=3).value = name_EH\
                             + str(PI)\
                             + "_"\
                             + str(EH)\
                             + "_BMS"\
                             + str(BB)\
                             + "_BR0"\
+                            + "_"\
+                            + name_BR\
                             + str(BR)\
                             + "."\
                             + ws.cell(row=i+counter*number_row,column=3).value  
                         else:
                             ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                             + " | "\
-                            + "BR0"\
+                            + name_BR\
                             + str(BR)\
                             + ","\
                             + "BB0"\
                             + str(BB)\
                             + " - "\
-                            + "EH05HD0"\
+                            + name_EH\
                             + str(EH)\
                             + " - PI0"\
                             + str(PI)
-                            ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                            ws.cell(row=i+counter*number_row,column=3).value = name_EH\
                             + str(PI)\
                             + "_"\
                             + str(EH)\

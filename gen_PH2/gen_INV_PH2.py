@@ -53,7 +53,7 @@ def file_creation_0( path_to_template_CL):
                             + " - PI0"\
                             +str(PI)
                             ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
-                            + str(PH)\
+                            + str(PI)\
                             + "_PCS"\
                             + str(C_BESS)\
                             + "_CL"\
@@ -72,7 +72,7 @@ def file_creation_0( path_to_template_CL):
                             + " - PI0"\
                             +str(PI)
                             ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
-                            + str(PH)\
+                            + str(PI)\
                             + "_"\
                             + "PCS"\
                             + str(C_BESS)\
