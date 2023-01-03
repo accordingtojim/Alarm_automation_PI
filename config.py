@@ -44,8 +44,11 @@ def num_assign(i):
 def destroy_ww(frame):
     frame.quit()
     frame.destroy()
-def array_arrangement(array1,array2):       #example array1= [1,2,3]     #manage if it's not a list but an integer
-    c = 0                                   #        array2= [4,5,6]    ->  array3= [4,5,5,6,6,6] then return the sum of elemnts of array3
+def array_arrangement(array1,array2):  
+    if len(array2) == 1:
+        for i in range(0,len(array1)):
+            array2.append(array2[0])            #example array1= [1,2,3]     #manage if it's not a list but an integer
+    c = 0                                   #array2= [4,5,6]    ->  array3= [4,5,5,6,6,6] then return the sum of elemnts of array3
     array3 = []
     for i in array1:
         for j in range (1,i+1):
@@ -179,6 +182,25 @@ def file_numbering(file_path):
             counter_ = 0
     wb['Sheet'].title = 'DiscreteAlarms'      
     wb.save(file_path)
+
+# class StringForming:
+#     def __init__(self,string1,string2,string3,string4,string5,string6,string7,string8,string9,string10,string11,string12,string13):    
+#         self.str_1 = string1
+#         self.str_2 = string2
+#         self.str_3 = string3
+#         self.str_4 = string4
+#         self.str_5 = string5
+#         self.str_6 = string6
+#         self.str_7 = string7
+#         self.str_8 = string8
+#         self.str_9 = string9
+#         self.str_10 = string10
+#         self.str_11 = string11
+#         self.str_12 = string12
+#         self.str_13 = string13
+    
+    
+    
 
         
     
