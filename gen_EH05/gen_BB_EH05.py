@@ -48,7 +48,7 @@ def file_creation_1( path_to_template_BB):
                         + " - "\
                         + name_EH\
                         + str(EH)\
-                        + "- PI0"\
+                        + " - PI0"\
                         + str(PI)    
                         ws.cell(row=i+counter*number_row,column=3).value = name_EH\
                         + str(PI)\
@@ -66,7 +66,7 @@ def file_creation_1( path_to_template_BB):
                         + " - "\
                         + name_EH\
                         + str(EH)\
-                        + "- PI0"\
+                        + " - PI0"\
                         + str(PI)
                         ws.cell(row=i+counter*number_row,column=3).value = name_EH\
                         + str(PI)\

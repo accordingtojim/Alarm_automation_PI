@@ -68,7 +68,6 @@ def file_creation_6( path_to_template_BR):
                             + str(EH)\
                             + "_BMS"\
                             + str(BB)\
-                            + "_BR0"\
                             + "_"\
                             + name_BR\
                             + str(BR)\
@@ -93,7 +92,8 @@ def file_creation_6( path_to_template_BR):
                             + str(EH)\
                             + "_BMS"\
                             + str(BB)\
-                            + "_BR0" \
+                            + "_"\
+                            + name_BR\
                             + str(BR)\
                             + "."\
                             + ws.cell(row=i+counter*number_row,column=3).value

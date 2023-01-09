@@ -43,29 +43,29 @@ def file_creation_4( path_to_template_HVAC):
                         + number_HVAC[HVAC-1]\
                         + " - EH05HD0"\
                         + str(EH)\
-                        + " - PI0" + str(PI)
+                        + " - PI0"\
+                        + str(PI)
                         ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
                         + str(PI)\
                         + "_"\
                         + str(EH)\
                         + "_HVAC"\
                         + number_HVAC[HVAC-1]\
-                        + "_strHMI_" + str(ws.cell(row=i+counter*number_row,column=3).value)
+                        + str(ws.cell(row=i+counter*number_row,column=3).value)
                     else:
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                         + " | HVAC "\
                         + number_HVAC[HVAC-1]\
                         + " - EH05HD0"\
                         + str(EH)\
-                        + " - PI0" + str(PI)
+                        + " - PI0"\
+                        + str(PI)
                         ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
                         + str(PI)\
                         + "_"\
                         + str(EH)\
                         + "_HVAC"\
                         + number_HVAC[HVAC-1]\
-                        + "_strHMI_"\
-                        + "Alarm."\
                         + str(ws.cell(row=i+counter*number_row,column=3).value)  
                 counter += 1
     ws.insert_cols(2)
