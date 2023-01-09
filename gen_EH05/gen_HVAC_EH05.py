@@ -8,7 +8,7 @@ def file_creation_4( path_to_template_HVAC):
     local_type = config.convert_to_int(config.array_type)
     local_n_HVAC = config.convert_to_int(config.n_HVAC)
     local_n_EH = config.convert_to_int(config.array_EH)
-    local_n_PI = config.convert_to_int(config.n_PI)
+    local_n_PI = config.n_PI
     path_to_new_template = (path_to_template_HVAC.replace('.xlsx','')) + '_new_HVAC' + '.xlsx'
     config.global_list.append(path_to_new_template)
     shutil.copy (path_to_template_HVAC , path_to_new_template)

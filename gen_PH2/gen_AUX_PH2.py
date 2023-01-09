@@ -7,7 +7,7 @@ def file_creation_2( path_to_template_AUX):
     counter = 0
     local_type = config.convert_to_int(config.array_type)
     local_n_PH = config.convert_to_int(config.array_PH)
-    local_n_PI = config.convert_to_int(config.n_PI)
+    local_n_PI = config.n_PI
     path_to_new_template = (path_to_template_AUX.replace('.xlsx','')) + '_new_AUX' + '.xlsx'
     config.global_list.append(path_to_new_template)
     shutil.copy (path_to_template_AUX , path_to_new_template)

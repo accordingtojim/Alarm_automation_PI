@@ -5,7 +5,7 @@ import os
 import config
 def file_creation_5( path_to_template_SKID):
     counter = 0
-    local_n_PI = config.convert_to_int(config.n_PI)
+    local_n_PI = config.n_PI
     path_to_new_template = (path_to_template_SKID.replace('.xlsx','')) + '_new_SKID' + '.xlsx'
     config.global_list.append(path_to_new_template)
     shutil.copy (path_to_template_SKID , path_to_new_template)
