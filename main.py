@@ -9,7 +9,7 @@ import shutil
 import os
 import define_hybrid_house as dhh
 import new_window_1 as nw
-import gen_EH05.gen_BB_EH05,gen_EH05.gen_BR_EH05,gen_EH05.gen_HVAC_EH05,gen_EH05.gen_PEMS_EH05
+import gen_EH05.gen_BB_EH05,gen_EH05.gen_BR_EH05,gen_EH05.gen_HVAC_EH05,gen_EH05.gen_PEMS_EH05,gen_EH05.generation
 import gen_PH2.gen_AUX_PH2,gen_PH2.gen_INV_PH2,gen_PH2.gen_PEMS_PH2,gen_PH2.gen_SKID_PH2
 import gen_HH.gen_AUX_HH,gen_HH.gen_BB_HH, gen_HH.gen_BR_HH,gen_HH.gen_HVAC_HH,gen_HH.gen_INV_HH,gen_HH.gen_PEMS_HH,gen_HH.gen_SKID_HH
 # root window
@@ -94,10 +94,15 @@ config.n_PI = number_of_PI.get()
 
 if config.n_PI != '' and config.n_PI != 0:
 # energy house
-    gen_EH05.gen_BB_EH05.file_creation_1('./template_excel/template_BB_samsung.xlsx')
-    gen_EH05.gen_BR_EH05.file_creation_6('./template_excel/template_BR_samsung.xlsx')
-    gen_EH05.gen_PEMS_EH05.file_creation_3('./template_excel/template_PEMS_EH05.xlsx')
-    gen_EH05.gen_HVAC_EH05.file_creation_4('./template_excel/template_HVAC_EH05.xlsx')
+    gen_EH05.generation.file_creation_1('./template_excel/template_BB_samsung.xlsx','BB_EH05')
+    gen_EH05.generation.file_creation_1('./template_excel/template_BR_samsung.xlsx','BR_EH05')
+    gen_EH05.generation.file_creation_1('./template_excel/template_PEMS_EH05.xlsx','PEMS_EH05')
+    gen_EH05.generation.file_creation_1('./template_excel/template_HVAC_EH05.xlsx','HVAC_EH05')
+
+    # gen_EH05.gen_BB_EH05.file_creation_1('./template_excel/template_BB_samsung.xlsx')
+    # gen_EH05.gen_BR_EH05.file_creation_6('./template_excel/template_BR_samsung.xlsx')
+    # gen_EH05.gen_PEMS_EH05.file_creation_3('./template_excel/template_PEMS_EH05.xlsx')
+    # gen_EH05.gen_HVAC_EH05.file_creation_4('./template_excel/template_HVAC_EH05.xlsx')
     
     # power house
 if  len(config.array_PH) != 0:
