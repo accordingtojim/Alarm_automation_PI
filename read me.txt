@@ -1,0 +1,1 @@
+branch per avere come dati in ingresso non quelli da GUI ma da file excel preimpostato
