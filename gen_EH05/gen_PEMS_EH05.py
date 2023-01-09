@@ -44,7 +44,6 @@ def file_creation_3( path_to_template_PEMS):
                         + str(PI)\
                         + "_"\
                         + str(EH)\
-                        + "_DiagnosticDB_"\
                         + str(ws.cell(row=i+counter*number_row,column=3).value)
                     else:
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
@@ -56,7 +55,6 @@ def file_creation_3( path_to_template_PEMS):
                         + str(PI) \
                         + "_"\
                         + str(EH)\
-                        + "_DiagnosticDB_"\
                         + str(ws.cell(row=i+counter*number_row,column=3).value)
                 counter += 1
     ws.insert_cols(2)
