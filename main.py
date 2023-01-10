@@ -6,7 +6,7 @@ import config
 import gen_EH05.gen_BB_EH05,gen_EH05.gen_BR_EH05,gen_EH05.gen_HVAC_EH05,gen_EH05.gen_PEMS_EH05
 import gen_PH2.gen_AUX_PH2,gen_PH2.gen_INV_PH2,gen_PH2.gen_PEMS_PH2,gen_PH2.gen_SKID_PH2
 
-wb = load_workbook('excel_sviluppo.xlsx')    
+wb = load_workbook('data_input.xlsx')    
 ws = wb.active
 
 config.n_PI = ws['L2'].value
