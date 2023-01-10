@@ -45,7 +45,7 @@ def file_creation_1( path_to_template_BB):
                     + str(HH)\
                     + "_BMS"\
                     + str(BB)\
-                    + "_BB."\
+                    + "_"\
                     + ws.cell(row=i+counter*number_row,column=3).value                                    
                 else:
                     ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
@@ -62,7 +62,7 @@ def file_creation_1( path_to_template_BB):
                     + str(HH)\
                     + "_BMS"\
                     + str(BB)\
-                    + "_BB."\
+                    + "_"\
                     + ws.cell(row=i+counter*number_row,column=3).value
             counter += 1
     ws.insert_cols(2)

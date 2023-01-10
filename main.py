@@ -8,7 +8,6 @@ from openpyxl import Workbook
 import shutil
 import os
 import define_hybrid_house as dhh
-import new_window_1 as nw
 import gen_HH.gen_AUX_HH,gen_HH.gen_BB_HH, gen_HH.gen_BR_HH,gen_HH.gen_HVAC_HH,gen_HH.gen_INV_HH,gen_HH.gen_PEMS_HH,gen_HH.gen_SKID_HH
 # root window
 root = Tk()
@@ -28,46 +27,46 @@ def PI_clicked():
 empty_label = Label(root, text="")
 empty_label.grid(row=0,column=0,columnspan=3,sticky=N,pady=20)
 
-# PI label 
-PI_label = Label(root, text="Insert the number of total Power Island")
-PI_label.grid(row=1,column=2,padx=150)
+# # PI label 
+# PI_label = Label(root, text="Insert the number of total Power Island")
+# PI_label.grid(row=1,column=2,padx=150)
 
-# empty label 2
-empty_label = Label(root, text="")
-empty_label.grid(row=2,column=0,columnspan=3,sticky=N,pady=0)
+# # empty label 2
+# empty_label = Label(root, text="")
+# empty_label.grid(row=2,column=0,columnspan=3,sticky=N,pady=0)
 
-# PI entry
-PI_entry = Entry(root, textvariable=number_of_PI)
-PI_entry.grid(row=3,column=2)
-PI_entry.focus()
+# # PI entry
+# PI_entry = Entry(root, textvariable=number_of_PI)
+# PI_entry.grid(row=3,column=2)
+# PI_entry.focus()
 
-# empty label 3
-empty_label = Label(root, text="")
-empty_label.grid(row=4,column=0,columnspan=3,sticky=N,pady=20)
+# # empty label 3
+# empty_label = Label(root, text="")
+# empty_label.grid(row=4,column=0,columnspan=3,sticky=N,pady=20)
 
 # HH label 
 HH_label = Label(root, text="Insert the number of Hybrid House")
-HH_label.grid(row=5,column=2,padx=150)
+HH_label.grid(row=1,column=2,padx=150)
 
 # empty label 4
 empty_label = Label(root, text="")
-empty_label.grid(row=6,column=0,columnspan=3,sticky=N,pady=0)
+empty_label.grid(row=2,column=0,columnspan=3,sticky=N,pady=0)
 
 # HH entry
 HH_entry = Entry(root, textvariable=number_of_HH)
-HH_entry.grid(row=7,column=2)
+HH_entry.grid(row=3,column=2)
 
 # empty label 5
 empty_label = Label(root, text="")
-empty_label.grid(row=8,column=0,columnspan=3,sticky=N,pady=20)
+empty_label.grid(row=4,column=0,columnspan=3,sticky=N,pady=20)
 
 # Define HH button
 OK_button = Button(root,text='Define HH', command=dhh.openNewWindow)
-OK_button.grid(row=7,column=2,padx=10,sticky=E)
+OK_button.grid(row=3,column=2,padx=10,sticky=E)
 
 # next button
-next_button = Button(root,text='Define PI', command=nw.openNewWindow)
-next_button.grid(row=3,column=2,padx=10,sticky=E)
+# next_button = Button(root,text='Define PI', command=nw.openNewWindow)
+# next_button.grid(row=3,column=2,padx=10,sticky=E)
 
 # empty label
 # empty_label = Label(root, text="")

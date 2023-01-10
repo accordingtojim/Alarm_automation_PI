@@ -1,1 +1,1 @@
-branch per avere come dati in ingresso non quelli da GUI ma da file excel preimpostato
+branch per generare in maniera automatica un excel con gli allarmi per Hybrid House
