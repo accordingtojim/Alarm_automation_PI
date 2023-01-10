@@ -29,13 +29,19 @@ def file_creation_1( path_to_template_BB):
                     ws.cell(row=i+n*number_row,column=j).value=ws.cell(row=i,column=j).value
     #wb.save(path_to_new_template)
     for HH in range(1 , local_HH_GUI + 1):
+        if HH>9:
+            name_HH = "HH1HD"
+            name_PI = "PI"
+        else:
+            name_HH = "HH1HD0"
+            name_PI = "PI0"
         for BB in range(1 , array_parsed[HH-1] + 1):
             for i in range(1,number_row+1):
                 if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value:
                     ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                     + " | "\
                     + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value) 
-                    ws.cell(row=i+counter*number_row,column=3).value = "HH1HD0"\
+                    ws.cell(row=i+counter*number_row,column=3).value = name_HH\
                     + str(HH)\
                     + "_BMS"\
                     + str(BB)\
@@ -46,11 +52,13 @@ def file_creation_1( path_to_template_BB):
                     + " | "\
                     + "BB0"\
                     + str(BB)\
-                    + " - HH1HD0"\
+                    + " - "\
+                    + name_HH\
                     + str(HH)\
-                    + " - PI0"\
+                    + " - "\
+                    + name_PI\
                     + str(HH)
-                    ws.cell(row=i+counter*number_row,column=3).value = "HH1HD0"\
+                    ws.cell(row=i+counter*number_row,column=3).value = name_HH\
                     + str(HH)\
                     + "_BMS"\
                     + str(BB)\

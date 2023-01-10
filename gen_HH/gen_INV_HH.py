@@ -35,6 +35,12 @@ def file_creation_0( path_to_template_CL):
     
     #nel file excel dedicato vado a sostituire e riordinare le colonne per avere la stessa struttura che ha un excel esportato da TIA
     for HH in range(1 ,local_HH_GUI+1):
+        if HH>9:
+            name_HH = "HH1HD"
+            name_PI = "PI"
+        else:
+            name_HH = "HH1HD0"
+            name_PI = "PI0"
         for C_BESS in range(1,array_parsed[HH-1]+1):
             for COLUMN in range(1 , number_of_column + 1):
                 for i in range(1,number_row+1):
@@ -42,7 +48,7 @@ def file_creation_0( path_to_template_CL):
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                         + " | "\
                         + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)
-                        ws.cell(row=i+counter*number_row,column=3).value = "HH1HD0"\
+                        ws.cell(row=i+counter*number_row,column=3).value = name_HH\
                         + str(HH)\
                         + "_"\
                         + "PCS"\
@@ -58,11 +64,12 @@ def file_creation_0( path_to_template_CL):
                         + ",PCS"\
                         + str(C_BESS)\
                         + " - "\
-                        + "HH1HD0"\
+                        + name_HH\
                         + str(HH)\
-                        + " - PI0"\
+                        + " - "\
+                        + name_PI\
                         + str(HH)
-                        ws.cell(row=i+counter*number_row,column=3).value = "HH1HD0"\
+                        ws.cell(row=i+counter*number_row,column=3).value = name_HH\
                         + str(HH)\
                         + "_"\
                         + "PCS"\
