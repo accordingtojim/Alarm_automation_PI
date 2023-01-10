@@ -1,1 +1,1 @@
-branch per generare in maniera automatica un excel con gli allarmi per Hybrid House
+Script in python per generare in maniera automatica un excel con gli allarmi per Hybrid House
