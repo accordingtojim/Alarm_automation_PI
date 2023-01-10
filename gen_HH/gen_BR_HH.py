@@ -33,6 +33,10 @@ def file_creation_6( path_to_template_BR):
     for HH in range(1 , local_HH_GUI + 1):
         for BB in range(1 , array_parsed1[HH-1]+1):
             for BR in range(1,array_parsed2[HH-1]+1):
+                if BR>9:
+                    name_BR = "BR"
+                else:
+                    name_BR = "BR0"
                 for i in range(1,number_row+1):
                     if ('Spare' or 'spare') in ws.cell(row=i+counter*number_row,column=1).value:
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
@@ -43,13 +47,14 @@ def file_creation_6( path_to_template_BR):
                         + "_BMS"\
                         + str(BB)\
                         + "_"\
-                        + "BR0"\
+                        + name_BR\
                         + str(BR)\
                         + "."\
                         + ws.cell(row=i+counter*number_row,column=3).value
                     else:
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                        + " | BR0"\
+                        + " | "\
+                        + name_BR\
                         + str(BR)\
                         + ",BB0"\
                         + str(BB)\
@@ -61,7 +66,8 @@ def file_creation_6( path_to_template_BR):
                         + str(HH)\
                         + "_BMS"\
                         + str(BB)\
-                        + "_BR0"\
+                        + "_"\
+                        + name_BR\
                         + str(BR)\
                         + "."\
                         + ws.cell(row=i+counter*number_row,column=3).value

@@ -40,7 +40,7 @@ def file_creation_1( path_to_template_BB):
                     + "_BMS"\
                     + str(BB)\
                     + "_BB."\
-                    + ws.cell(row=i+counter*number_row,column=4).value                                    
+                    + ws.cell(row=i+counter*number_row,column=3).value                                    
                 else:
                     ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                     + " | "\
