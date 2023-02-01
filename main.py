@@ -3,8 +3,8 @@ from openpyxl import Workbook
 import os
 import array
 import config
-import gen_EH05.gen_BB_EH05,gen_EH05.gen_BR_EH05,gen_EH05.gen_HVAC_EH05,gen_EH05.gen_PEMS_EH05
-import gen_PH2.gen_AUX_PH2,gen_PH2.gen_INV_PH2,gen_PH2.gen_PEMS_PH2,gen_PH2.gen_SKID_PH2
+import gen_EH05.gen_EH05HD_BB,gen_EH05.gen_EH05HD_BR,gen_EH05.gen_EH05HD_HVAC,gen_EH05.gen_EH05HD_PEMS
+import gen_PH2.gen_PH2HD_CBESSHD_CL,gen_PH2.gen_PH2HD_CBESSHD_AUX,gen_PH2.gen_PH2HD_PEMS,gen_PH2.gen_PH2HD_MVSKID
 
 wb = load_workbook('data_input.xlsx')    
 ws = wb.active
@@ -62,16 +62,16 @@ config.array_PH.append(ws['B48'].value)
 wb.close()
 
 # energy house
-gen_EH05.gen_BB_EH05.file_creation_1('./template_excel/template_BB_samsung.xlsx')
-gen_EH05.gen_BR_EH05.file_creation_6('./template_excel/template_BR_samsung.xlsx')
-gen_EH05.gen_PEMS_EH05.file_creation_3('./template_excel/template_PEMS_EH05.xlsx')
-gen_EH05.gen_HVAC_EH05.file_creation_4('./template_excel/template_HVAC_EH05.xlsx')
+gen_EH05.gen_EH05HD_BB.file_creation_1('./template_excel/template_BB_samsung.xlsx')
+gen_EH05.gen_EH05HD_BR.file_creation_6('./template_excel/template_BR_samsung.xlsx')
+gen_EH05.gen_EH05HD_PEMS.file_creation_3('./template_excel/template_PEMS_EH05.xlsx')
+gen_EH05.gen_EH05HD_HVAC.file_creation_4('./template_excel/template_HVAC_EH05.xlsx')
     
 # power house
-gen_PH2.gen_INV_PH2.file_creation_0('./template_excel/template_CL_PH2HD.xlsx')
-gen_PH2.gen_AUX_PH2.file_creation_2('./template_excel/template_AUX_PH2HD.xlsx')
-gen_PH2.gen_PEMS_PH2.file_creation_3('./template_excel/template_PEMS_PH2HD.xlsx')
-gen_PH2.gen_SKID_PH2.file_creation_5('./template_excel/template_SKID_PH2HD.xlsx')
+gen_PH2.gen_PH2HD_CBESSHD_CL.file_creation_0('./template_excel/template_CL_PH2HD.xlsx')
+gen_PH2.gen_PH2HD_CBESSHD_AUX.file_creation_2('./template_excel/template_AUX_PH2HD.xlsx')
+gen_PH2.gen_PH2HD_PEMS.file_creation_3('./template_excel/template_PEMS_PH2HD.xlsx')
+gen_PH2.gen_PH2HD_MVSKID.file_creation_5('./template_excel/template_SKID_PH2HD.xlsx')
 
 config.file_aggregation(config.global_list)
 config.file_removal(config.global_list)
