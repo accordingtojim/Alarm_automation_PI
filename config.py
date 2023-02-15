@@ -79,14 +79,24 @@ def multiply_array(array1,array2,return_sum):
         return sum
     else:
         return array3
-def array_name_HVAC(num):
+def array_name_HVAC_string(num):
     half = int(num/2)
     array = []
     for i in range(0,half):
-        var = '1_'+str(i+1)
+        var = str(i+1) + ',BB1'
         array.append(var)
     for i in range(0,half):
-        var ='2_'+str(i+1)
+        var = str(i+1) + ',BB2'
+        array.append(var)
+    return array
+def array_name_HVAC_var(num):
+    half = int(num/2)
+    array = []
+    for i in range(0,half):
+        var = '1_' + str(i+1) 
+        array.append(var)
+    for i in range(0,half):
+        var = '2_' + str(i+1) 
         array.append(var)
     return array
 def file_aggregation(lista):
@@ -181,9 +191,8 @@ def file_numbering(file_path):
     wb.save(file_path)
 
         
-    
-        
-
+# test =array_name_HVAC(10)     
+# print(test)
 
     
             

@@ -39,47 +39,25 @@ def file_creation_0( path_to_template_CL):
             for C_BESS in range(1,array_parsed_CBESS[PI-1]+1):
                 for COLUMN in range(1 , number_of_column + 1):
                     for i in range(1,number_row+1):
-                        if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value:
-                            ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                            + " | "\
-                            + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)\
-                            + " | CL"\
-                            + str(COLUMN)\
-                            + ",PCS"\
-                            + str(C_BESS)\
-                            + " - "\
-                            + "PH2HD0"\
-                            + str(PH)\
-                            + " - PI0"\
-                            +str(PI)
-                            ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
-                            + str(PI)\
-                            + "_PCS"\
-                            + str(C_BESS)\
-                            + "_CL"\
-                            + str(COLUMN)\
-                            + "_Status_HMI."\
-                            + str(ws.cell(row=i+counter*number_row,column=3).value)
-                        else:
-                            ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                            + " | CL"\
-                            + str(COLUMN)\
-                            + ",PCS"\
-                            + str(C_BESS)\
-                            + " - "\
-                            + "PH2HD0"\
-                            + str(PH)\
-                            + " - PI0"\
-                            +str(PI)
-                            ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
-                            + str(PI)\
-                            + "_"\
-                            + "PCS"\
-                            + str(C_BESS)\
-                            + "_CL"\
-                            + str(COLUMN)\
-                            + "_Status_HMI."\
-                            + str(ws.cell(row=i+counter*number_row,column=3).value)
+                        ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
+                        + " | CL"\
+                        + str(COLUMN)\
+                        + ",PCS"\
+                        + str(C_BESS)\
+                        + " - "\
+                        + "PH2HD0"\
+                        + str(PH)\
+                        + " - PI0"\
+                        +str(PI)
+                        ws.cell(row=i+counter*number_row,column=3).value = "PH2HD0"\
+                        + str(PI)\
+                        + "_"\
+                        + "PCS"\
+                        + str(C_BESS)\
+                        + "_CL"\
+                        + str(COLUMN)\
+                        + "_Status_HMI."\
+                        + str(ws.cell(row=i+counter*number_row,column=3).value)
                     counter += 1
     ws.insert_cols(2)
     wb.save(path_to_new_template)

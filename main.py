@@ -62,15 +62,15 @@ config.array_PH.append(ws['B48'].value)
 wb.close()
 
 # energy house
-gen_EH05.gen_EH05HD_BB.file_creation_1('./template_excel/template_BB_samsung.xlsx')
-gen_EH05.gen_EH05HD_BR.file_creation_6('./template_excel/template_BR_samsung.xlsx')
-gen_EH05.gen_EH05HD_PEMS.file_creation_3('./template_excel/template_PEMS_EH05.xlsx')
-gen_EH05.gen_EH05HD_HVAC.file_creation_4('./template_excel/template_HVAC_EH05.xlsx')
+#gen_EH05.gen_EH05HD_BB.file_creation_1('./template_excel/template_EH05HD_BB_samsung_E4L.xlsx')
+#gen_EH05.gen_EH05HD_BR.file_creation_6('./template_excel/template_EH05HD_BR_samsung_E4L.xlsx')
+#gen_EH05.gen_EH05HD_PEMS.file_creation_3('./template_excel/template_EH05HD_PEMS_TCCexp.xlsx')
+#gen_EH05.gen_EH05HD_HVAC.file_creation_4('./template_excel/template_EH05HD_HVAC_Envicool.xlsx')
     
 # power house
-gen_PH2.gen_PH2HD_CBESSHD_CL.file_creation_0('./template_excel/template_CL_PH2HD.xlsx')
-gen_PH2.gen_PH2HD_CBESSHD_AUX.file_creation_2('./template_excel/template_AUX_PH2HD.xlsx')
-gen_PH2.gen_PH2HD_PEMS.file_creation_3('./template_excel/template_PEMS_PH2HD.xlsx')
+#gen_PH2.gen_PH2HD_CBESSHD_CL.file_creation_0('./template_excel/template_CBESSHD_CL.xlsx')
+#gen_PH2.gen_PH2HD_CBESSHD_AUX.file_creation_2('./template_excel/template_CBESSHD_AUX.xlsx')
+gen_PH2.gen_PH2HD_PEMS.file_creation_3('./template_excel/template_PH2HD_PEMS_TCCexp.xlsx')
 gen_PH2.gen_PH2HD_MVSKID.file_creation_5('./template_excel/template_PH2HD_MVSKID_TCCexp.xlsx')
 
 config.file_aggregation(config.global_list)
