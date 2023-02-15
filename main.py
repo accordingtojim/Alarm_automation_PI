@@ -71,7 +71,7 @@ gen_EH05.gen_EH05HD_HVAC.file_creation_4('./template_excel/template_HVAC_EH05.xl
 gen_PH2.gen_PH2HD_CBESSHD_CL.file_creation_0('./template_excel/template_CL_PH2HD.xlsx')
 gen_PH2.gen_PH2HD_CBESSHD_AUX.file_creation_2('./template_excel/template_AUX_PH2HD.xlsx')
 gen_PH2.gen_PH2HD_PEMS.file_creation_3('./template_excel/template_PEMS_PH2HD.xlsx')
-gen_PH2.gen_PH2HD_MVSKID.file_creation_5('./template_excel/template_SKID_PH2HD.xlsx')
+gen_PH2.gen_PH2HD_MVSKID.file_creation_5('./template_excel/template_PH2HD_MVSKID_TCCexp.xlsx')
 
 config.file_aggregation(config.global_list)
 config.file_removal(config.global_list)

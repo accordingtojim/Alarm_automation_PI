@@ -32,30 +32,16 @@ def file_creation_3( path_to_template_PEMS):
         for EH in range(1,array_parsed_EH[PI-1]+1):
             for PEMS in range(1 , 2):
                 for i in range(1,number_row+1):
-                    if 'Spare' in ws.cell(row=i+counter*number_row,column=1).value:
-                        ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                        + " | "\
-                        + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)\
-                        + ", PEMS - EH05HD0"\
-                        + str(EH)\
-                        +" - PI0"\
-                        +str(PI)
-                        ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
-                        + str(PI)\
-                        + "_"\
-                        + str(EH)\
-                        + str(ws.cell(row=i+counter*number_row,column=3).value)
-                    else:
-                        ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
-                        + ", PEMS - EH05HD0"\
-                        + str(EH)\
-                        +" - PI0"\
-                        +str(PI)
-                        ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
-                        + str(PI) \
-                        + "_"\
-                        + str(EH)\
-                        + str(ws.cell(row=i+counter*number_row,column=3).value)
+                    ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
+                    + " - EH05HD0"\
+                    + str(EH)\
+                    +" - PI0"\
+                    +str(PI)
+                    ws.cell(row=i+counter*number_row,column=3).value = "EH05HD0"\
+                    + str(PI) \
+                    + "_"\
+                    + str(EH)\
+                    + str(ws.cell(row=i+counter*number_row,column=3).value)
                 counter += 1
     ws.insert_cols(2)
     wb.save(path_to_new_template)

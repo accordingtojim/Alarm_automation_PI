@@ -39,7 +39,7 @@ def file_creation_2( path_to_template_AUX):
                         + " | "\
                         + str(ws.cell(row =i+counter*number_row, column = 3).value) + "." + str(ws.cell(row =i+counter*number_row, column = 4).value)\
                         + " | "\
-                        + "QAUX,PCS"\
+                        + "AUX,PCS"\
                         + str(AUX)\
                         + " - "\
                         + "PH2HD0"\
@@ -54,7 +54,7 @@ def file_creation_2( path_to_template_AUX):
                     else:
                         ws.cell(row=i+counter*number_row,column=1).value = str(ws.cell(row =i+counter*number_row, column = 1).value)\
                         + " | "\
-                        + "QAUX,PCS"\
+                        + "AUX,PCS"\
                         + str(AUX)\
                         + " - "\
                         + "PH2HD0"\
