@@ -178,7 +178,7 @@ def file_numbering(file_path):
     while TRUE:
         if ws.cell(row = 2 + counter_tot,column=3).value is None :
                 break
-        if (("PI0"+str(counter) in ws.cell(row = 2 + counter_tot,column=3).value) or ("Spare" in ws.cell(row = 2 + counter_tot,column=3).value)):
+        if ("PI0"+str(counter) in ws.cell(row = 2 + counter_tot,column=3).value) :   #or ("Spare" in ws.cell(row = 2 + counter_tot,column=3).value)
             init_number = 100000*counter 
             ws.cell(row = 2 + counter_tot,column=1).value = init_number + counter_
             ws.cell(row = 2 + counter_tot,column=2).value = init_number + counter_
